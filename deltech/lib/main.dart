@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'delTech',
         theme: ThemeData(
-            primarySwatch: Colors.deepPurple ,
+            primarySwatch: Colors.deepPurple,
             useMaterial3: false,
             fontFamily: GoogleFonts.oswald().fontFamily),
         home: const LoginPage());
