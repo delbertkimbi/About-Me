@@ -1,6 +1,6 @@
 import 'package:deltech/about%20pages/drummer.dart';
 import 'package:deltech/about%20pages/engineer.dart';
-import 'package:deltech/about%20pages/entrepreneur.dart';
+import 'package:deltech/about%20pages/entrpreneur.dart';
 import 'package:deltech/about%20pages/student.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';

@@ -1,6 +1,7 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DashBoardScreen extends StatefulWidget {
   const DashBoardScreen({super.key});
@@ -10,6 +11,27 @@ class DashBoardScreen extends StatefulWidget {
 }
 
 class _DarshBoardScreenState extends State<DashBoardScreen> {
+  // Future<void> launchUri(String url) async {
+  //   final Uri uri = Uri.parse(url);
+  //   if (await canLaunchUrl(uri)) {
+  //     await launchUrl(uri);
+  //   } else {
+  //     throw 'Could not launch $url';
+  //   }
+  // }
+
+  final Uri whatsapp = Uri.parse('https://wa.me/237674208573');
+
+  // Future<void> _launchInAppWithBrowserOptions(Uri url) async {
+  //   if (!await launchUrl(
+  //     url,
+  //     mode: LaunchMode.inAppBrowserView,
+  //     browserConfiguration: const BrowserConfiguration(showTitle: true),
+  //   )) {
+  //     throw Exception('Could not launch $url');
+  //   }
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,10 +98,11 @@ class _DarshBoardScreenState extends State<DashBoardScreen> {
                   crossAxisCount: 2,
                   children: [
                     MyBox(
-                      icon: FontAwesomeIcons.facebookF,
-                      text: 'Facebook',
-                      onTap: () {},
-                    ),
+                        icon: FontAwesomeIcons.facebookF,
+                        text: 'Facebook',
+                        onTap: () {}
+                        // launchUri('https://web.facebook.com/delbert.drums'),
+                        ),
                     MyBox(
                       text: 'LinkdIn',
                       icon: FontAwesomeIcons.linkedin,
@@ -88,13 +111,12 @@ class _DarshBoardScreenState extends State<DashBoardScreen> {
                     MyBox(
                       text: 'Whatsapp',
                       icon: FontAwesomeIcons.whatsapp,
-                      onTap: () {},
+                      onTap: () => launchUrl(whatsapp),
                     ),
                     MyBox(
-                      text: 'Discord',
-                      icon: FontAwesomeIcons.discord,
-                      onTap: () {},
-                    ),
+                        text: 'Discord',
+                        icon: FontAwesomeIcons.discord,
+                        onTap: () {}),
                     MyBox(
                       text: 'Github',
                       icon: FontAwesomeIcons.github,

@@ -3,16 +3,17 @@ import 'dart:math';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 
-class Page3 extends StatefulWidget {
-  const Page3({super.key});
+class Page1 extends StatefulWidget {
+  const Page1({super.key});
 
   @override
-  State<Page3> createState() => _Page3State();
+  State<Page1> createState() => _Page1State();
 }
 
-class _Page3State extends State<Page3> {
-  bool isFavourite = false;
+class _Page1State extends State<Page1> {
   final _controller = ConfettiController();
+  bool isFavourite = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +45,7 @@ class _Page3State extends State<Page3> {
                             confettiController: _controller,
                             blastDirection: -pi,
                             colors: const [
-                              Colors.redAccent,
+                              Color(0xffff914d),
                               Colors.deepPurple,
                               Colors.white,
                             ],
@@ -67,7 +68,7 @@ class _Page3State extends State<Page3> {
                                 icon: Icon(
                                   Icons.favorite,
                                   color: isFavourite
-                                      ? Colors.redAccent
+                                      ? const Color(0xffff914d)
                                       : Colors.white,
                                 )))
                       ],
@@ -88,7 +89,7 @@ class _Page3State extends State<Page3> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             const Text(
-                              'Pro Drummer',
+                              'Techpreneur',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -102,7 +103,7 @@ class _Page3State extends State<Page3> {
                               height: 17,
                               width: 17,
                               decoration: const BoxDecoration(
-                                color: Colors.redAccent,
+                                color: Color(0xffff914d),
                                 shape: BoxShape.circle,
                               ),
                             )
@@ -127,11 +128,11 @@ class _Page3State extends State<Page3> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 12, vertical: 5),
                             decoration: BoxDecoration(
-                              color: Colors.redAccent,
+                              color: const Color(0xffff914d),
                               borderRadius: BorderRadius.circular(12),
                             ),
                             child: const Text(
-                              'More Info',
+                              'Read more',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 14,
